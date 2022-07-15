@@ -1,0 +1,24 @@
+{
+  "name": "ssid-backend-requirements",
+  "version": "1.0.0",
+  "description": "Javascript action that runs a Serverless deploy using the serverless-python-requirements plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SovereignWallet-Network/SSID-Backend-requirements.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SovereignWallet-Network/SSID-Backend-requirements/issues"
+  },
+  "homepage": "https://github.com/SovereignWallet-Network/SSID-Backend-requirements#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "exeq": "^3.0.0"
+  }
+}
