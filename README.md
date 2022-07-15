@@ -36,8 +36,8 @@ Javascript action that runs a Serverless deploy using the serverless-python-requ
   with:
     python-version: 3.7  # Update with your python version
 
-- name: Serverless Deploy
-  uses: sumeetweb/serverless-deploy@master
+- name: Serverless Requirements
+  uses: SovereignWallet-Network/SSID-Backend-requirements@v1.0.0
   with:
     args: ''  # any deploy arguments you want to pass
   env:
@@ -56,8 +56,9 @@ Javascript action that runs a Serverless deploy using the serverless-python-requ
   with:
     python-version: 3.7  # Update with your python version
 
-- name: Serverless Deploy
-  uses: 
+- name: Serverless Requirements
+  uses: SovereignWallet-Network/SSID-Backend-requirements@v1.0.0
+
   with:
     args: ''  # any deploy arguments you want to pass
   env:
