@@ -15,7 +15,7 @@ async function installServerlessAndPlugins() {
     'npm i serverless-python-requirements',
     'npm i serverless-plugin-canary-deployments',
     'sls -v',
-    'sed -i "6i Os.tmpDir=Os.tmpdir;" /node_modules/hapi/lib/defaults.js'
+    'sed -i "6i Os.tmpDir=Os.tmpdir;" node_modules/hapi/lib/defaults.js'
   )
 }
 
