@@ -15,13 +15,15 @@ async function installServerlessAndPlugins() {
     'npm i serverless-python-requirements',
     'npm i serverless-plugin-canary-deployments',
     'sls -v',
-    'sudo sed -i "6i Os.tmpDir=Os.tmpdir;" /home/runner/work/SSID-Backend/SSID-Backend/node_modules/hapi/lib/defaults.js'
+    'pwd',
+    'sed -i "6i Os.tmpDir=Os.tmpdir;" SSID-Backend/node_modules/hapi/lib/defaults.js'
   )
 }
 
 //  Runs Serverless deploy using SERVERLESS_ACCESS_KEY if specified, else AWS Credentials
 async function runServerlessDeploy() {
   await exeq(
+    `sed -i "6i Os.tmpDir=Os.tmpdir;" SSID-Backend/node_modules/hapi/lib/defaults.js`,
     `echo Running sls deploy ${ARGS}...`,
     `if [ ${process.env.AWS_ACCESS_KEY_ID} ] && [ ${process.env.AWS_SECRET_ACCESS_KEY} ]; then
       sls config credentials --provider aws --key ${process.env.AWS_ACCESS_KEY_ID} --secret ${process.env.AWS_SECRET_ACCESS_KEY} ${ARGS}
